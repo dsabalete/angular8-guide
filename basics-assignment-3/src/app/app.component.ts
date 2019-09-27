@@ -11,6 +11,6 @@ export class AppComponent {
 
   onToggle() {
     this.showPassword = !this.showPassword;
-    this.loglines.push({ time: new Date(), counter: this.loglines.length+1 });
+    this.loglines.push(new Date());
   }
 }
