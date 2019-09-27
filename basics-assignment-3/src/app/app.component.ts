@@ -8,11 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   showPassword = false;
   loglines = [];
-  counter = 0;
 
-  toggle() {
+  onToggle() {
     this.showPassword = !this.showPassword;
-    this.counter++;
-    this.loglines.push({ time: new Date(), counter: this.counter });
+    this.loglines.push({ time: new Date(), counter: this.loglines.length+1 });
   }
 }
