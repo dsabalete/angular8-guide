@@ -10,4 +10,15 @@
       </ol>
     </div>
   </div>
+  <button 
+    class="btn btn-primary"
+    (click)="toggle()">
+    Display Details
+  </button>
+  <p *ngIf="showPassword">Secret Password = tuna</p>
+  <p *ngFor="let line of loglines.reverse()"
+    [ngStyle]="line.counter > 5 ? {backgroundColor: 'blue'}: {}"
+    [ngClass]="{log: line.counter > 5}">
+    Click {{ line.counter}} at {{ line.time | date:'h:mm:ss a' }}
+  </p>
 </div>
